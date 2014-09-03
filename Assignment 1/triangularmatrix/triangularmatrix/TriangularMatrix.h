@@ -28,7 +28,7 @@ private:
     //fill the array with random 2digit numbers
     for (int row = 0; row<rows; row++){
       for (int col = 0; col<colAry[row]; col++){
-        array[row][col] = rand() % 90 + 10;
+        array[row][col] = (rand() % 90 + 10)/3.0;
       }
     }
     return array;

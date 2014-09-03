@@ -7,5 +7,8 @@
 int main(){
   TriangularMatrix<float> triangle(5);
   triangle.print();
+  
+  TriangularMatrix<int> inttriangle(5);
+  inttriangle.print();
   return 0;
 }
