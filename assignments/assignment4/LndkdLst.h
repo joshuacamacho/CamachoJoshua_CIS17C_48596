@@ -2,6 +2,7 @@
 #define	LNKDLST_H
 
 #include <string>
+#include <sstream>
 using namespace std;
 
 class LnkdLst {
@@ -15,7 +16,14 @@ private:
 
 public:
     LnkdLst(int);
+    LnkdLst(const LnkdLst&);
     void append(int);
+    void prepend(int);
+    void insertAfter(int,int);
+    void insertBefore(int, int);
+    Node* first();
+    Node* last();
+    void extract(int);
     string toString();
     virtual ~LnkdLst();
 };
