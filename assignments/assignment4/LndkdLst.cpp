@@ -1,7 +1,6 @@
 /* 
  * File:   LndkdLst.cpp
  * Author: Joshua Camacho
- * 
  * Created on October 8, 2014, 9:09 AM
  */
 
@@ -14,17 +13,39 @@ LnkdLst::LnkdLst(int x){
 }
 
 LnkdLst::LnkdLst(const LnkdLst& old){
+  Node* temp = old.head;
   this->head = new Node;
-  this->worker = new Node;
   this->head->data = old.head->data;
   this->worker = this->head;
-  
-  while (this->worker != NULL){
+  while (temp->next != NULL){
     this->worker->next = new Node;
     this->worker = this->worker->next;
+    temp = temp->next;
+    this->worker->data = temp->data;
+    this->worker->next = NULL;
+  } 
+  this->worker = this->head;
+}
 
+LnkdLst& LnkdLst::operator=(const LnkdLst& old){
+  Node* current;
+  worker = head;
+  while (worker->next != NULL){
+    current = worker;
+    worker = worker->next;
+    delete current;
   }
+  current = old.head;
+  worker = head;
   
+  while (current->next != NULL){
+    worker->next = new Node;
+    worker->data = current->data;
+    worker = worker->next;
+    current = current->next;
+  }
+  worker->next = NULL;
+  return *this;
 }
  
 void LnkdLst::append(int x){
@@ -57,7 +78,7 @@ void LnkdLst::prepend(int x){
   this->head->data = x;
   this->head->next = before;
   before = NULL;
-  this->worker = head;
+  this->worker = this->head;
 }
 
 void LnkdLst::insertAfter(int index, int x){
@@ -91,7 +112,7 @@ void LnkdLst::insertBefore(int index, int x){
 }
 
 LnkdLst::~LnkdLst(){
-  Node* current = head;;
+  Node* current = head;
   
   while (current != NULL){
     this->worker = current;

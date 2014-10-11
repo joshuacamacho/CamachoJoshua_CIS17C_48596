@@ -11,6 +11,7 @@
 
 int main(int argc, char** argv) {
     LnkdLst *test = new LnkdLst(10);
+    
     //test->prepend(3);
     test->append(2);
     test->append(3);
@@ -23,8 +24,19 @@ int main(int argc, char** argv) {
     test->insertAfter(4, 7);
     test->insertBefore(2, 12);
     std::cout << test->toString();
+    LnkdLst *copy = new LnkdLst(*test);
+    std::cout << "\n" << copy->toString() << "\n";
+    
+    LnkdLst *secondcopy = new LnkdLst(1);
+    std::cout << "\n" << secondcopy->toString() << "\n";
+
+
+    secondcopy = copy;
+
+    std::cout << "\n" << secondcopy->toString() << "\n";
     
     delete test;
+    delete copy;
     std::cout <<"\nhi\n"<< test;
     std::cin.get();
     return 0;
