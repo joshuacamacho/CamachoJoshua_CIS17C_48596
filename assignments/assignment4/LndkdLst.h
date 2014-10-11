@@ -5,7 +5,6 @@
 #include <sstream>
 using namespace std;
 
-
 class LnkdLst {
 private:
     struct Node{
@@ -18,7 +17,6 @@ private:
 public:
     LnkdLst(int);
     LnkdLst(const LnkdLst&);
-    LnkdLst& operator=(const LnkdLst&);
     void append(int);
     void prepend(int);
     void insertAfter(int,int);
