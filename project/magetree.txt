@@ -1,7 +1,7 @@
 Teir 1              __________________
-   	           |    Arcane Bolt   |
+   	               |    Arcane Bolt   |
                   /          |         \
                  /           |          \
 Teir 2          /            |           \
         _______/___    ______|____    ____\______
-       | Frostbolt |   | Fireball |  | Time Bomb |
+       | Fireball |   | Frostbolt |  | Time Bomb |

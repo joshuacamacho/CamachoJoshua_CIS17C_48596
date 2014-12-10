@@ -78,16 +78,20 @@
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="MageTree.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Talent.h" />
+    <ClInclude Include="TalentTree.h" />
     <ClInclude Include="Wearable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="MageTree.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Talent.cpp" />
+    <ClCompile Include="TalentTree.cpp" />
     <ClCompile Include="Wearable.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

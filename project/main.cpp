@@ -1,9 +1,12 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "Player.h"
 #include "Game.h"
 #include "Wearable.h"
-#include <cstdlib>
-#include <ctime>
+#include "Talent.h"
+#include "MageTree.h"
+
 
 int main(){
   /*
@@ -20,8 +23,10 @@ int main(){
     
     std::cin.get();
   }*/
-  Game g;
-  g.displayArt("magetree.txt");
+  //Game g;
+  //g.displayArt("magetree.txt");
+  MageTree m;
+  m.printTree(FROSTBOLT);
   std::cin.get();
   //g.begin();
   return 0;
